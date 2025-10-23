@@ -277,7 +277,7 @@ def us_prime_rate():
 def prime_rates():
     data = {
         "Canada": {
-            "prime_rate": g_et_canada_prime_rate_history(),
+            "prime_rate": get_canada_prime_rate_history(),
             "last_updated": str(date.today())
         },
         "US": {
@@ -288,4 +288,5 @@ def prime_rates():
     return jsonify(data)
 
 if __name__ == '__main__':
+
     app.run(debug=True) 
